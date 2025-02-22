@@ -1,10 +1,10 @@
-import ProductItem from "../ProductStore";
+import ProductItem from '../ProductStore'
 
-import * as S from "./styles";
+import * as S from './styles'
 
 export type Props = {
-  menu: Rest;
-};
+  menu: Rest
+}
 
 const ProductListStore = ({ menu }: Props) => {
   return (
@@ -13,7 +13,7 @@ const ProductListStore = ({ menu }: Props) => {
         <S.List>
           {menu.cardapio.map((menu) => (
             <ProductItem
-              key={""}
+              key={''}
               descricao={menu.descricao}
               image={menu.foto}
               title={menu.nome}
@@ -25,7 +25,7 @@ const ProductListStore = ({ menu }: Props) => {
         </S.List>
       </div>
     </S.Container>
-  );
-};
+  )
+}
 
-export default ProductListStore;
+export default ProductListStore

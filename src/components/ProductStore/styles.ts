@@ -1,8 +1,8 @@
-import styled from "styled-components";
-import { colors } from "../../styles";
-import { ButtonLink } from "../Button/styles";
-import { Props } from "../Button";
-import { Link } from "react-router-dom";
+import styled from 'styled-components'
+import { colors } from '../../styles'
+import { ButtonLink } from '../Button/styles'
+import { Props } from '../Button'
+import { Link } from 'react-router-dom'
 
 export const Card = styled.div`
   background-color: ${colors.orange};
@@ -18,7 +18,7 @@ export const Card = styled.div`
     height: 24px;
     display: inline-block;
   }
-`;
+`
 
 export const Capa = styled.div`
   img {
@@ -29,7 +29,7 @@ export const Capa = styled.div`
     height: 168px;
     object-fit: cover;
   }
-`;
+`
 export const Action = styled.div`
   position: absolute;
   top: 0;
@@ -41,7 +41,7 @@ export const Action = styled.div`
   align-items: center;
   justify-content: center;
   opacity: 0;
-`;
+`
 export const Image = styled.div`
   position: relative;
 
@@ -52,13 +52,13 @@ export const Image = styled.div`
       cursor: zoom-in;
     }
   }
-`;
+`
 export const Title = styled.h3`
   font-size: 16px;
   display: block;
   padding: 8px 0px 8px 0px;
   color: ${colors.yellow};
-`;
+`
 
 export const Description = styled.p`
   font-size: 14px;
@@ -68,7 +68,7 @@ export const Description = styled.p`
   max-width: 304px;
   padding-bottom: 8px;
   color: ${colors.yellow};
-`;
+`
 export const Modal = styled.div`
   position: fixed;
   top: 0;
@@ -92,7 +92,7 @@ export const Modal = styled.div`
     height: 100%;
     background-color: rgba(0, 0, 0, 0.8);
   }
-`;
+`
 
 export const ModalContent = styled.div`
   z-index: 1;
@@ -147,7 +147,7 @@ export const ModalContent = styled.div`
     line-height: 24px;
     margin-bottom: 24px;
   }
-`;
+`
 export const ButtonPopUp = styled(Link)<Props>`
   width: 218px;
   height: 24px;
@@ -157,4 +157,4 @@ export const ButtonPopUp = styled(Link)<Props>`
   color: ${colors.orange};
   background-color: ${colors.yellow};
   text-decoration: none;
-`;
+`

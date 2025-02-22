@@ -6,7 +6,7 @@ import { add, clearAlert, open } from '../../store/reducers/cart'
 
 import { ButtonLink } from '../Button/styles'
 import * as S from './styles'
-import zoom from '../../assets/images/mais_zoom_1.png'
+
 import close from '../../assets/images/close.png'
 
 type Props = {
@@ -23,20 +23,14 @@ interface ModalState {
 }
 
 const ProductItem = ({ id, title, descricao, image, preco, porcao }: Props) => {
-  const [modal, setModal] = useState<ModalState>({
-    isVisible: false
-  })
+  const [modal, setModal] = useState<ModalState>({ isVisible: false })
 
   const closeModal = () => {
-    setModal({
-      isVisible: false
-    })
+    setModal({ isVisible: false })
   }
 
   const openModal = () => {
-    setModal({
-      isVisible: true
-    })
+    setModal({ isVisible: true })
   }
 
   const getDescription = (descricao: string) => {
@@ -52,6 +46,8 @@ const ProductItem = ({ id, title, descricao, image, preco, porcao }: Props) => {
   )
 
   const addToCart = () => {
+    openModal() // Abre o modal
+
     const item: Menu = {
       categoria: '',
       nota: '',
@@ -64,12 +60,18 @@ const ProductItem = ({ id, title, descricao, image, preco, porcao }: Props) => {
       descricao: descricao,
       porcao
     }
-    dispatch(add(item))
-    dispatch(open())
+
+    dispatch(add(item)) // Adiciona o item ao carrinho
+
     if (alertMessage) {
       alert(alertMessage)
       dispatch(clearAlert())
     }
+  }
+
+  const openCartFromModal = () => {
+    dispatch(open()) // Abre o carrinho quando clicar no botão dentro do modal
+    closeModal() // Fecha o modal
   }
 
   return (
@@ -79,9 +81,6 @@ const ProductItem = ({ id, title, descricao, image, preco, porcao }: Props) => {
           <S.Capa>
             <img src={image} alt={title} />
           </S.Capa>
-          <S.Action>
-            <img src={zoom} alt="Clique para maximizar" onClick={openModal} />
-          </S.Action>
         </S.Image>
         <S.Title>{title}</S.Title>
         <S.Description>{getDescription(descricao)}</S.Description>
@@ -113,7 +112,7 @@ const ProductItem = ({ id, title, descricao, image, preco, porcao }: Props) => {
                 type="link"
                 title="Adicionar ao carrinho"
                 size="big"
-                onClick={addToCart}
+                onClick={openCartFromModal} // Abre o carrinho quando clicar no botão dentro do modal
               >
                 {` Adicionar ao carrinho - R$${preco}`}
               </S.ButtonPopUp>
