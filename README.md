@@ -153,20 +153,20 @@ deploy profissional
 
 
 Ideal para apresentação em entrevistas e portfólio profissional.
+.
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── pages/
+│   ├── hooks/
+│   ├── context/
+│   ├── App.tsx
+│   └── main.tsx
+├── index.html
+├── tsconfig.json
+├── vite.config.ts
+└── eslint.config.js
 
-📁 Estrutura do Projeto
-src/
- ├── components/
- ├── pages/
- ├── hooks/
- ├── context/
- ├── App.tsx
- ├── main.tsx
-assets/
-index.html
-tsconfig.json
-vite.config.ts
-eslint.config.js
 
 
 ▶️ Como rodar o projeto
