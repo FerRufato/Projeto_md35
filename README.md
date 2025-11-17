@@ -1,50 +1,208 @@
-# React + TypeScript + Vite
+Este projeto foi criado com o objetivo de desenvolver uma aplicação front-end moderna, leve e de alta performance usando React + TypeScript + Vite.
+O objetivo era desenvolver uma interface capaz de:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+listar produtos,
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+permitir que o usuário adicione itens ao carrinho,
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-- Configure the top-level `parserOptions` property like this:
+atualizar totais em tempo real,
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+simular um fluxo de pagamento,
 
-```js
-// eslint.config.js
+
+gerar um pedido final.
+
+
+Além disso, o projeto precisava ser rápido, escalável, organizado e utilizando ferramentas modernas como React + TypeScript + Vite.
+
+⚙️ Ação
+Para atingir esse objetivo, foi criada uma aplicação front-end com:
+🧩 1. Interface inspirada no iFood
+
+
+Listagem de produtos com foto, nome e preço.
+
+
+Responsividade para celular e desktop.
+
+
+Layout simples e intuitivo.
+
+
+🛒 2. Carrinho de compras funcional
+
+
+Adicionar e remover itens.
+
+
+Alterar quantidades individualmente.
+
+
+Calcular subtotal, taxa, entrega e total automaticamente.
+
+
+💳 3. Simulação de pagamento
+
+
+Etapa para seleção de método (Pix, cartão, dinheiro).
+
+
+Validação simples antes de finalizar.
+
+
+Possibilidade de adicionar observações do pedido.
+
+
+📦 4. Geração do pedido
+
+
+Após o pagamento, o sistema gera um número de pedido.
+
+
+Exibe um resumo completo:
+
+
+itens comprados
+
+
+endereço
+
+
+forma de pagamento
+
+
+valor total
+
+
+
+
+🛠️ 5. Tecnologia e boas práticas
+O projeto utiliza:
+
+
+React 18
+
+
+TypeScript
+
+
+Vite (rápido, leve e com HMR)
+
+
+ESLint configurado com regras recomendadas, incluindo:
+
+
+análise por TypeScript
+
+
+eslint-plugin-react
+
+
+padrão de código consistente
+
+
+
+
+🌐 6. Deploy em produção
+Aplicação publicada na Vercel, garantindo acesso rápido e estabilidade.
+🔗 Acesso online:
+https://projeto-md35.vercel.app
+
+🟢 Resultado
+O resultado final é uma aplicação estilo iFood com:
+
+
+⚡ Carregamento extremamente rápido
+
+
+🛒 Carrinho totalmente funcional
+
+
+💰 Fluxo de pagamento simulado
+
+
+📦 Geração de pedido estruturada
+
+
+📱 Design responsivo
+
+
+🧼 Código limpo, padronizado e fácil de manter
+
+
+Essa estrutura demonstra domínio de:
+
+
+manipulação de estado
+
+
+trabalho com componentes
+
+
+boas práticas com TypeScript
+
+
+lógica de negócio front-end
+
+
+deploy profissional
+
+
+Ideal para apresentação em entrevistas e portfólio profissional.
+
+📁 Estrutura do Projeto
+src/
+ ├── components/
+ ├── pages/
+ ├── hooks/
+ ├── context/
+ ├── App.tsx
+ ├── main.tsx
+assets/
+index.html
+tsconfig.json
+vite.config.ts
+eslint.config.js
+
+
+▶️ Como rodar o projeto
+npm install
+npm run dev
+
+Acesse em:
+http://localhost:5173/
+
+
+📐 Configuração do ESLint (Resumo)
+Parser options:
+parserOptions: {
+  project: ['./tsconfig.node.json', './tsconfig.app.json'],
+  tsconfigRootDir: import.meta.dirname,
+}
+
+Regras recomendadas com tipagem:
+tseslint.configs.recommendedTypeChecked
+
+Plugin React:
 import react from 'eslint-plugin-react'
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+plugins: { react },
+rules: {
+  ...react.configs.recommended.rules,
+  ...react.configs['jsx-runtime'].rules,
+}
+
+
+⭐ Conclusão
+Este projeto demonstra a criação de uma mini aplicação de delivery completa, com:
+✔ UX inspirada em apps reais
+✔ Carrinho totalmente funcional
+✔ Pagamento simulado
+✔ Pedido gerado com sucesso
+✔ Código limpo e escalável
+✔ Deploy online
+
